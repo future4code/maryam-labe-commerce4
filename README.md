@@ -1,1 +1,8 @@
-Sejam bem vindos ao Labe-commerce, esse repositório contém um esqueleto de app React e um .gitignore.
+### Nome do projeto
+
+### O que funciona
+
+
+### O que não funciona
+
+
