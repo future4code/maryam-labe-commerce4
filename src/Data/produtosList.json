@@ -1,0 +1,59 @@
+
+[
+    {
+      "id": 1,
+      "name": "Viagem para Mércurio",
+      "price": 250.00,
+      "photo": "https://picsum.photos/200/200?a=1",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Viagem para Vênus",
+      "price": 175.00,
+      "photo": "https://picsum.photos/200/200?a=2",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Viagem para Marte",
+      "price": 175.00,
+      "photo": "https://picsum.photos/200/200?a=3",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Viagem para Júpiter",
+      "price": 250.00,
+      "photo": "https://picsum.photos/200/200?a=4",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "name": "Viagem para Saturno",
+      "price": 400.00,
+      "photo": "https://picsum.photos/200/200?a=5",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "name": "Viagem para Urano",
+      "price": 500.00,
+      "photo": "https://picsum.photos/200/200?a=6",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "name": "Viagem para Netuno",
+      "price": 550.00,
+      "photo": "https://picsum.photos/200/200?a=7",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "name": "Viagem para Plutão",
+      "price": 620.00,
+      "photo": "https://picsum.photos/200/200?a=8",
+      "quantity": 1
+    }
+]

@@ -6,9 +6,15 @@ export default class Carrinho extends React.Component {
         return(
             <div className="carrinho">
                 <h1>Carrinho</h1>
-                <p>produto1</p>
-                <p>produto2</p>
-                <p>produto3</p>
+                <div>
+                    <div className="produtoCarrinho">
+                        <p>1x</p>{/*  Quantidade do mesmo produto */}
+                        <p>Macacão espacial</p> {/*Descrição do produto */}
+                        <p>R$ 1,99</p>{/*Valor */}
+                        <button>Remover</button>
+                    </div>
+                    <p>Valor Total = R$1,99</p>
+                </div>
             </div>
         )
     }

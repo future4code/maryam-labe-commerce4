@@ -12,19 +12,10 @@ function App() {
       </div>
       <div className="Main">
         <Filtros/>
-      <div className="produtos">
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-        <Produtos/>
-      </div>
-        <Carrinho/>
+        {/* <div className="produtos">
+          <Produtos/>
+        </div> */}
+      <Carrinho/>
       </div>
       <div className="cabecalho">
         <h1>Footer</h1>
