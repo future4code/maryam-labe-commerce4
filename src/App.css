@@ -12,24 +12,50 @@
   flex-direction: row;
 }
 
-.produtos{
+/* .produtos{
   display: grid;
   grid-template-columns:  repeat(5, 1fr);
+} */
+
+.cardProdutos{
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  align-items: center;
+}
+
+.listaProdutos{
+  display: grid;
+  grid-template-columns:  repeat(5, 1fr);
+}
+.imagemProduto{
+  height: 200px;
+  width: 200px;
 }
 
 .carrinho{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 200px;
+  width: 300px;
   height: 80vh;
   border: solid black 1px;
 }
+.produtoCarrinho{
+  display: flex;
 
-.filtros{
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.filtrosContainer{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 200px;
   height: 80vh;
   border: solid black 1px;
