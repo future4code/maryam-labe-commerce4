@@ -1,6 +1,8 @@
 import React from 'react';
 import "../App.css"
 import Produtos from './Produtos';
+import Carrinho from './Carrinho';
+
 
 
 export default class Filtros extends React.Component {
@@ -9,7 +11,8 @@ export default class Filtros extends React.Component {
         minPrice:"",
         maxPrice:"",
         ordenacao:"titulo",
-        ordenacaoCrescente: 1
+        ordenacaoCrescente: 1,
+        carrinho: [],
     }
 
     updateQuery=(event)=>{
@@ -42,7 +45,36 @@ export default class Filtros extends React.Component {
         })
     }
 
-    
+    addCarrinho = (produto) => {
+        console.log(produto);
+        if (!this.state.carrinho.includes(produto)) {
+            this.setState({
+                carrinho: [
+                ...this.state.carrinho,
+                produto,
+                ]
+            })
+        } else {
+            produto.quantity += 1;
+            this.setState({
+                carrinho: [
+                ... this.state.carrinho,
+                ]
+            })
+        }
+    }
+
+    removeCarrinho = (produto) => {
+        const novoCarrinho = this.state.carrinho.filter((item) => item !== produto)
+        this.setState({
+            carrinho: novoCarrinho,
+        })
+    }
+
+    precoFinal = (carrinho) => {
+        const precofinal = carrinho.reduce((a, b) => (a.price * a.quantity + b.price*b.quantity), 0)
+        return precofinal;
+    }
 
     render (){
         return(
@@ -103,7 +135,15 @@ export default class Filtros extends React.Component {
                     maxPrice = {this.state.maxPrice}
                     ordenacao = {this.state.ordenacao}
                     ordenacaoCrescente = {this.state.ordenacaoCrescente}
+                    addCarrinho = {this.addCarrinho}
                 />
+                <Carrinho 
+                    carrinho={this.state.carrinho}
+                    removeCarrinho = {this.removeCarrinho}
+                    precoFinal = {this.precoFinal}
+                />
+            
+
             </div>
             </div>
         )

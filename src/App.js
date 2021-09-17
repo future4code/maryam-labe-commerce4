@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Produtos from './Components/Produtos';
 import Filtros from './Components/Filtros';
-import Carrinho from './Components/carrinho';
+import Carrinho from './Components/Carrinho';
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
         {/* <div className="produtos">
           <Produtos/>
         </div> */}
-      <Carrinho/>
       </div>
       <div className="cabecalho">
         <h1>Footer</h1>

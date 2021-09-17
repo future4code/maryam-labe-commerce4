@@ -5,16 +5,16 @@ export default class Carrinho extends React.Component {
     render (){
         return(
             <div className="carrinho">
-                <h1>Carrinho</h1>
-                <div>
-                    <div className="produtoCarrinho">
-                        <p>1x</p>{/*  Quantidade do mesmo produto */}
-                        <p>Macacão espacial</p> {/*Descrição do produto */}
-                        <p>R$ 1,99</p>{/*Valor */}
-                        <button>Remover</button>
-                    </div>
-                    <p>Valor Total = R$1,99</p>
-                </div>
+                <h4> CARRINHO DE COMPRAS </h4>
+            {this.props.carrinho.map((item) => {
+                return (<div className="produtoCarrinho">
+                <p>{item.name}</p>
+                <p>{`R$${item.price},00`}</p>
+                <p>{item.quantity}</p>
+                <button onClick={() => this.props.removeCarrinho(item)}>Remover</button>
+                </div>)
+            })}
+            <p>Total = {`R$${this.props.precoFinal(this.props.carrinho)},00`} </p>
             </div>
         )
     }

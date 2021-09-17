@@ -22,10 +22,10 @@ export default class Produtos extends React.Component {
                     return produto.name.toLowerCase().includes(this.props.query.toLowerCase())
                 })
                 .filter(produto =>{
-                    return this.props.minPrice === "" || produto.valor >= this.props.minPrice
+                    return this.props.minPrice === "" || produto.price >= this.props.minPrice
                 })
                 .filter(produto =>{
-                    return this.props.maxPrice === "" || produto.valor <= this.props.maxPrice
+                    return this.props.maxPrice === "" || produto.price <= this.props.maxPrice
                 })
                 .sort((produto,proximoProduto)=>{
                     switch (this.props.ordenacao){
@@ -41,8 +41,8 @@ export default class Produtos extends React.Component {
                         <div className = "cardProdutos">
                             <img className="imagemProduto" src={produto.photo} alt="Imagem Produto" />
                             <p>{produto.name}</p>
-                            <p>{produto.price}</p>
-                            <button>Adicionar ao carrinho</button>
+                            <p>{`R$${produto.price},00`}</p>
+                            <button onClick={() => this.props.addCarrinho(produto)}>Adicionar ao carrinho</button>
                         </div>
                     )
                 })}
