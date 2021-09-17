@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Produtos from './Components/Produtos';
+import Filtros from './Components/Filtros';
+import Carrinho from './Components/Carrinho';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="cabecalho">
+        <h1> Produtos do espaço </h1> 
+      </div>
+      <div className="Main">
+        <Filtros/>
+        {/* <div className="produtos">
+          <Produtos/>
+        </div> */}
+      </div>
+      <div className="cabecalho">
+        <h1>Footer</h1>
+      </div>
     </div>
   );
 }
