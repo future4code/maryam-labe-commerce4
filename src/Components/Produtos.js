@@ -1,16 +1,10 @@
 import React from 'react';
 import '../App.css';
 import produtosList from'../Data/produtosList.json'
-import Filtros from './Filtros'
 
 export default class Produtos extends React.Component {
     state = {
         produtos: produtosList,
-        //   query:props.query,
-        //  minPrice:"2,00",
-        //  maxPrice:"3,00",
-        //  ordenacao:"",
-        //  ordenacaoCrescente: 1
     }
 
     render (){
@@ -38,7 +32,7 @@ export default class Produtos extends React.Component {
                 })
                 .map(produto =>{
                     return(
-                        <div className = "cardProdutos">
+                        <div key={produto.id} className = "cardProdutos">
                             <img className="imagemProduto" src={produto.photo} alt="Imagem Produto" />
                             <p>{produto.name}</p>
                             <p>{`R$${produto.price},00`}</p>
