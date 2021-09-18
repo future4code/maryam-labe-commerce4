@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import Produtos from './Components/Produtos';
 import Filtros from './Components/Filtros';
-import Carrinho from './Components/Carrinho';
 
 function App() {
   return (

@@ -58,28 +58,31 @@ export default class Filtros extends React.Component {
             produto.quantity += 1;
             this.setState({
                 carrinho: [
-                ... this.state.carrinho,
+                ...this.state.carrinho,
                 ]
             })
         }
     }
 
     removeCarrinho = (produto) => {
+        if (produto.quantity > 1){
+            produto.quantity -=1;
+            this.setState({
+                carrinho: [
+                    ...this.state.carrinho
+                ]
+            })
+        }else {
+
         const novoCarrinho = this.state.carrinho.filter((item) => item !== produto)
         this.setState({
             carrinho: novoCarrinho,
-        })
-    }
-
-    precoFinal = (carrinho) => {
-        const precofinal = carrinho.reduce((a, b) => (a.price * a.quantity + b.price*b.quantity), 0)
-        return precofinal;
+        })}
     }
 
     render (){
         return(
             <div>
-               
             <div className="main">
                 <div className="filtrosContainer">
                 <h1>Filtros </h1>
@@ -108,7 +111,7 @@ export default class Filtros extends React.Component {
                         onChange={this.updateMaxPrice}
                     />
                 </div>
-                <label for="sort">Ordenação</label>
+                <label >Ordenação</label>
                 <div>
                     
                     <select 
@@ -140,10 +143,7 @@ export default class Filtros extends React.Component {
                 <Carrinho 
                     carrinho={this.state.carrinho}
                     removeCarrinho = {this.removeCarrinho}
-                    precoFinal = {this.precoFinal}
                 />
-            
-
             </div>
             </div>
         )
