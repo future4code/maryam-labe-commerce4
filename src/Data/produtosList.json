@@ -2,58 +2,66 @@
 [
     {
       "id": 1,
-      "name": "Viagem para Mércurio",
+      "name": "Viagem para Mercúrio",
       "price": 250.00,
-      "photo": "https://picsum.photos/200/200?a=1",
-      "quantity": 1
+      "photo": "http://s2.glbimg.com/BgWxSZbymvV_HhJaGOTQqMWHGZn2-TkZ9LdOdYB9vrBIoz-HdGixxa_8qOZvMp3w/s.glbimg.com/jo/g1/f/original/2013/02/21/mercurio.jpg",
+      "quantity": 1,
+      "alt": "Foto Mercurio"
     },
     {
       "id": 2,
       "name": "Viagem para Vênus",
       "price": 175.00,
-      "photo": "https://picsum.photos/200/200?a=2",
-      "quantity": 1
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/f/ff/PIA23791-Venus-RealAndEnhancedContrastViews-20200608_%28cropped2%29.jpg",
+      "quantity": 1,
+      "alt": "Foto Vênus"
     },
     {
       "id": 3,
       "name": "Viagem para Marte",
       "price": 175.00,
-      "photo": "https://picsum.photos/200/200?a=3",
-      "quantity": 1
+      "photo": "https://www.infoescola.com/wp-content/uploads/2013/08/marte.jpg",
+      "quantity": 1,
+      "alt": "Foto Marte"
     },
     {
       "id": 4,
       "name": "Viagem para Júpiter",
       "price": 250.00,
-      "photo": "https://picsum.photos/200/200?a=4",
-      "quantity": 1
+      "photo": "https://s2.glbimg.com/EwejtBMEF35DRv4lg-EP1njAa0A=/e.glbimg.com/og/ed/f/original/2019/08/09/jupiter-inset.jpg",
+      "quantity": 1,
+      "alt": "Foto Júpiter"
     },
     {
       "id": 5,
       "name": "Viagem para Saturno",
       "price": 400.00,
-      "photo": "https://picsum.photos/200/200?a=5",
-      "quantity": 1
+      "photo": "https://www.renderhub.com/virtual-creator-and-creature/incredible-hd-saturn-planet/incredible-hd-saturn-planet-19.jpg",
+      "quantity": 1,
+      "alt": "Foto Saturno"
     },
     {
       "id": 6,
       "name": "Viagem para Urano",
       "price": 500.00,
-      "photo": "https://picsum.photos/200/200?a=6",
-      "quantity": 1
+      "photo": "https://s2.static.brasilescola.uol.com.br/be/2021/04/planeta-urano.jpg",
+      "quantity": 1,
+      "alt": "Foto Urano"
     },
     {
       "id": 7,
       "name": "Viagem para Netuno",
       "price": 550.00,
-      "photo": "https://picsum.photos/200/200?a=7",
-      "quantity": 1
+      "photo": "https://www.infoescola.com/wp-content/uploads/2008/04/netuno.jpg",
+      "quantity": 1,
+      "alt": "Foto Netuno"
     },
     {
       "id": 8,
       "name": "Viagem para Plutão",
       "price": 620.00,
-      "photo": "https://picsum.photos/200/200?a=8",
-      "quantity": 1
+      "photo": "https://s2.glbimg.com/SG86hmxFiMh1J5M-QS7iPXsOHWs=/e.glbimg.com/og/ed/f/original/2019/08/27/800px-pluto_in_true_color_-_high-res.jpg",
+      "quantity": 1,
+      "alt": "Foto Plutão"
     }
 ]

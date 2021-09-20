@@ -1,16 +1,55 @@
 import React from 'react';
 import '../App.css';
 import produtosList from'../Data/produtosList.json'
+import styled from 'styled-components';
+
+
+
+const CardProdutos = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: solid lightgray 1px;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    color: lightgray;
+    font-weight: bold;
+`
+
+const ListaProdutos = styled.div`
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+`
+
+const ImagemProduto = styled.img`
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+`
+const Button = styled.button`
+    border-radius: 7px;
+`
 
 export default class Produtos extends React.Component {
     state = {
         produtos: produtosList,
+        
     }
+    componentDidUpdate() {
+        window.localStorage.setItem("textoprodutos", JSON.stringify(this.state.produtos));
+      };
+
+    componentDidMount() {
+        const produtos = localStorage.getItem("textoprodutos");
+        if (produtos) {
+          this.setState({ produtos: JSON.parse(produtos) });
+        }
+      };
 
     render (){
         const ListaDeProdutos = this.state.produtos
         return(
-            <div className="listaProdutos">
+            <ListaProdutos>
                 {ListaDeProdutos
                 .filter(produto =>{
                     return produto.name.toLowerCase().includes(this.props.query.toLowerCase())
@@ -32,15 +71,15 @@ export default class Produtos extends React.Component {
                 })
                 .map(produto =>{
                     return(
-                        <div key={produto.id} className = "cardProdutos">
-                            <img className="imagemProduto" src={produto.photo} alt="Imagem Produto" />
+                        <CardProdutos key={produto.id}>
+                            <ImagemProduto src={produto.photo} alt={produto.alt} />
                             <p>{produto.name}</p>
                             <p>{`R$${produto.price},00`}</p>
-                            <button onClick={() => this.props.addCarrinho(produto)}>Adicionar ao carrinho</button>
-                        </div>
+                            <Button onClick={() => this.props.addCarrinho(produto)}>Adicionar ao carrinho</Button>
+                        </CardProdutos>
                     )
                 })}
-            </div>
+            </ListaProdutos>
         )
     }
 }
