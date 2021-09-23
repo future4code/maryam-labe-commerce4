@@ -1,6 +1,6 @@
 # Labe-Commerce4
 
-## integrantes do grupo
+## Integrantes do grupo
 
 - Marina Ramminger Pereira
 - Carlos Daniel Oliveira Nunes
